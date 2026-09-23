@@ -6,6 +6,7 @@ import ios27GlassAsset from "@/assets/ios27/ios-27-liquid-glass.png.asset.json";
 import ios27SiriAsset from "@/assets/ios27/ios-27-siri-ai.png.asset.json";
 import ios27AppsAsset from "@/assets/ios27/ios-27-apps.png.asset.json";
 import ios27CameraAsset from "@/assets/ios27/ios-27-camera.png.asset.json";
+import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: SayCell,
@@ -58,9 +59,9 @@ function SayCell() {
     <main className="min-h-screen bg-[#080808] text-white">
       <header className="sticky top-0 z-50 border-b border-[#d6b35a]/15 bg-[#080808]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <a href="#" className="flex items-center gap-2 text-xl font-black tracking-tight">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#d6b35a]/50 text-[#e6c86e]"></span>
-            <span>SAY<span className="text-[#e6c86e]">CELL</span></span>
+          <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="SAY CELL — início">
+            <img src={sayCellLogoAsset.url} alt="Logo da SAY CELL" className="h-11 w-11 rounded-full border border-[#d6b35a]/40 object-cover" />
+            <span className="hidden sm:inline">SAY<span className="text-[#e6c86e]">CELL</span></span>
           </a>
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
             <a href="#iphones" className="hover:text-[#e6c86e]">iPhones</a>
@@ -74,10 +75,12 @@ function SayCell() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden border-b border-[#d6b35a]/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(230,200,110,.13),transparent_38%)]" />
+      <section className="relative min-h-[640px] overflow-hidden border-b border-[#d6b35a]/10">
+        <img src={sayCellLogoAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-55" />
+        <div className="absolute inset-0 bg-[#080808]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-transparent to-[#080808]" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
-          <div className="mx-auto mb-7 flex h-20 w-20 items-center justify-center rounded-3xl border border-[#e6c86e]/40 bg-[#e6c86e]/10 text-4xl text-[#e6c86e] shadow-[0_0_50px_rgba(230,200,110,.12)]"></div>
+          <img src={sayCellLogoAsset.url} alt="SAY CELL" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#e6c86e]/50 object-cover shadow-2xl md:h-40 md:w-40" />
           <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#e6c86e]">SAY CELL</p>
           <h1 className="mx-auto max-w-3xl text-4xl font-black tracking-tight md:text-6xl">Conectando você ao melhor da Apple.</h1>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/55">Loja de iPhone em Caxias.</p>
@@ -171,7 +174,7 @@ function SayCell() {
 
       <section id="contato" className="mx-auto max-w-6xl px-6 py-20">
         <div className="rounded-3xl border border-[#e6c86e]/20 bg-[#0d0d0d] p-8 text-center md:p-12">
-          <Apple size={32} className="mx-auto text-[#e6c86e]" />
+          <img src={sayCellLogoAsset.url} alt="Logo da SAY CELL" className="mx-auto h-28 w-28 rounded-full border border-[#e6c86e]/40 object-cover" />
           <h2 className="mt-4 text-3xl font-black">SAY CELL</h2>
           <p className="mt-2 text-sm text-white/50">Loja física em Duque de Caxias • Pague só na entrega</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
