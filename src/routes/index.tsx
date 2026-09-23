@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, Apple } from "lucide-react";
+import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, Apple, type LucideIcon } from "lucide-react";
 import ios27IntroAsset from "@/assets/ios27/ios-27-introducao.png.asset.json";
 import ios27PerformanceAsset from "@/assets/ios27/ios-27-desempenho.png.asset.json";
 import ios27GlassAsset from "@/assets/ios27/ios-27-liquid-glass.png.asset.json";
@@ -45,6 +45,12 @@ const ios27Updates = [
   { image: ios27CameraAsset.url, alt: "Novo modo da Siri na câmera do iPhone" },
 ];
 
+const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
+  { icon: ShieldCheck, title: "5 anos", text: "+ de 7.000 clientes" },
+  { icon: ShieldCheck, title: "6 meses a 1 ano", text: "de garantia" },
+  { icon: MapPin, title: "Loja física", text: "Duque de Caxias" },
+];
+
 const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
 
 function SayCell() {
@@ -84,14 +90,10 @@ function SayCell() {
 
       <section className="border-b border-[#d6b35a]/10 bg-white/[.015]">
         <div className="mx-auto grid max-w-6xl gap-px md:grid-cols-3">
-          {[
-            [ShieldCheck, "5 anos", "+ de 7.000 clientes"],
-            [ShieldCheck, "6 meses a 1 ano", "de garantia"],
-            [MapPin, "Loja física", "Duque de Caxias"],
-          ].map(([Icon, title, text]) => (
-            <div key={String(title)} className="flex items-center justify-center gap-3 px-5 py-7 text-center">
+          {trustItems.map(({ icon: Icon, title, text }) => (
+            <div key={title} className="flex items-center justify-center gap-3 px-5 py-7 text-center">
               <Icon size={21} className="text-[#e6c86e]" />
-              <div><p className="font-bold">{String(title)}</p><p className="text-xs text-white/45">{String(text)}</p></div>
+              <div><p className="font-bold">{title}</p><p className="text-xs text-white/45">{text}</p></div>
             </div>
           ))}
         </div>
