@@ -8,8 +8,6 @@ import ios27AppsAsset from "@/assets/ios27/ios-27-apps.png.asset.json";
 import ios27CameraAsset from "@/assets/ios27/ios-27-camera.png.asset.json";
 import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
-import storeServiceAsset from "@/assets/store/loja-atendimento.png.asset.json";
-import storeAccessoriesAsset from "@/assets/store/loja-acessorios.png.asset.json";
 import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
 import feedShowcaseOneAsset from "@/assets/store/feed-vitrine-1.png.asset.json";
 import feedIphonesAsset from "@/assets/store/feed-iphones-mesa.png.asset.json";
