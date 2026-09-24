@@ -87,6 +87,7 @@ const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
 ];
 
 const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
+const whatsappForIphone = (model: string, color: string) => `https://wa.me/5521979529575?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre o ${model} na cor ${color}.`)}`;
 
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
   const [imageFailed, setImageFailed] = useState(false);
@@ -114,7 +115,9 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
         <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2" aria-label={`Cores disponíveis para ${product.name}`}>
           {product.colors.map((color) => (
             <span key={color.name} className="inline-flex items-center gap-1.5 text-[11px] text-white/55">
-              <span aria-hidden="true" className="h-4 w-4 rounded-full border border-white/25" style={{ backgroundColor: color.hex }} />
+              <a href={whatsappForIphone(product.name, color.name)} target="_blank" rel="noreferrer" aria-label={`Pedir informações sobre ${product.name} na cor ${color.name}`} title={`Consultar ${product.name} — ${color.name}`} className="inline-flex rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6c86e]">
+                <span aria-hidden="true" className="h-4 w-4 rounded-full border border-white/25" style={{ backgroundColor: color.hex }} />
+              </a>
               {color.name}
             </span>
           ))}
