@@ -8,9 +8,13 @@ import ios27AppsAsset from "@/assets/ios27/ios-27-apps.png.asset.json";
 import ios27CameraAsset from "@/assets/ios27/ios-27-camera.png.asset.json";
 import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
-import storeServiceAsset from "@/assets/store/loja-atendimento.png.asset.json";
-import storeAccessoriesAsset from "@/assets/store/loja-acessorios.png.asset.json";
 import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
+import feedShowcaseOneAsset from "@/assets/store/feed-vitrine-1.png.asset.json";
+import feedIphonesAsset from "@/assets/store/feed-iphones-mesa.png.asset.json";
+import feedShowcaseTwoAsset from "@/assets/store/feed-vitrine-2.png.asset.json";
+import feedEnvironmentAsset from "@/assets/store/feed-ambiente.png.asset.json";
+import feedServiceAsset from "@/assets/store/feed-atendimento.png.asset.json";
+import feedLaunchesAsset from "@/assets/store/feed-lancamentos.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: SayCell,
@@ -51,10 +55,14 @@ const ios27Updates = [
 ];
 
 const storePhotos = [
-  { image: storeWheelAsset.url, alt: "Espaço da SAY CELL com roleta de prêmios" },
-  { image: storeServiceAsset.url, alt: "Área de atendimento da loja SAY CELL" },
-  { image: storeAccessoriesAsset.url, alt: "Exposição de acessórios Apple na SAY CELL" },
-  { image: storeShowcaseAsset.url, alt: "Vitrine de iPhones e logo da SAY CELL" },
+  { image: feedIphonesAsset.url, alt: "iPhones disponíveis na SAY CELL", tag: "IPHONES", title: "Escolha seu novo iPhone", position: "object-center" },
+  { image: feedShowcaseOneAsset.url, alt: "Vitrine de produtos Apple da SAY CELL", tag: "PRONTA ENTREGA", title: "Tecnologia Apple em um só lugar", position: "object-center" },
+  { image: feedShowcaseTwoAsset.url, alt: "Estantes com iPhones e acessórios Apple", tag: "NOSSA VITRINE", title: "Modelos para todos os estilos", position: "object-center" },
+  { image: feedLaunchesAsset.url, alt: "Novos modelos de iPhone na loja", tag: "LANÇAMENTOS", title: "As novidades já chegaram", position: "object-center" },
+  { image: feedServiceAsset.url, alt: "Área de atendimento da SAY CELL", tag: "ATENDIMENTO", title: "Um espaço feito para você", position: "object-center" },
+  { image: feedEnvironmentAsset.url, alt: "Ambiente interno da loja SAY CELL", tag: "NOSSA LOJA", title: "Venha conhecer a SAY CELL", position: "object-center" },
+  { image: storeWheelAsset.url, alt: "Espaço da SAY CELL com roleta de prêmios", tag: "EXPERIÊNCIA", title: "Sua visita pode valer prêmios", position: "object-center" },
+  { image: storeShowcaseAsset.url, alt: "Vitrine de iPhones e logo da SAY CELL", tag: "SAY CELL", title: "Conectando você ao melhor da Apple", position: "object-center" },
 ];
 
 const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
@@ -114,23 +122,41 @@ function SayCell() {
         </div>
       </section>
 
-      <section id="loja" className="scroll-mt-20 border-b border-[#d6b35a]/10 bg-[#0b0b0b] py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-10 max-w-2xl">
-            <p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">SAY CELL por dentro</p>
-            <h2 className="text-3xl font-black md:text-4xl">Conheça nossa loja</h2>
-            <p className="mt-4 text-sm leading-6 text-white/55">Um espaço preparado para você conhecer nossos iPhones e acessórios de perto.</p>
+      <section id="loja" className="scroll-mt-20 border-b border-border/20 bg-[var(--brand-canvas)] py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mx-auto mb-10 max-w-xl text-center md:mb-14">
+            <img src={sayCellLogoAsset.url} alt="SAY CELL" className="mx-auto mb-4 h-14 w-14 rounded-full border border-[var(--brand-gold)]/40 object-cover" />
+            <p className="text-xs font-bold uppercase tracking-[.3em] text-[var(--brand-gold)]">SAY CELL por dentro</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Nosso feed</h2>
+            <p className="mt-3 text-sm leading-6 text-foreground/55">Produtos, novidades e o espaço que preparamos para você.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {storePhotos.map((photo, index) => (
-              <figure key={photo.alt} className={`group overflow-hidden rounded-lg border border-[#e6c86e]/15 bg-[#111111] ${index === 3 ? "sm:col-span-2 lg:col-span-2" : ""}`}>
-                <img
-                  src={photo.image}
-                  alt={photo.alt}
-                  loading="lazy"
-                  className={`h-full min-h-80 w-full object-cover transition duration-500 group-hover:scale-[1.02] ${index === 3 ? "aspect-[16/10]" : "aspect-[3/4]"}`}
-                />
-              </figure>
+
+          <div className="mx-auto grid max-w-md gap-7 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+            {storePhotos.map((photo) => (
+              <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-gold)]/20 bg-[var(--brand-surface)] shadow-2xl">
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-foreground/10 px-4 py-3">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-gold)]/50 object-cover" />
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-bold">saycell_</p>
+                      <p className="truncate text-[11px] text-foreground/45">Duque de Caxias</p>
+                    </div>
+                  </div>
+                  <Instagram size={18} className="shrink-0 text-[var(--brand-gold)]" aria-hidden="true" />
+                </div>
+
+                <div className="relative aspect-[9/16] overflow-hidden bg-background">
+                  <img src={photo.image} alt={photo.alt} loading="lazy" className={`h-full w-full object-cover ${photo.position} transition duration-700 group-hover:scale-[1.02]`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                    <p className="mb-2 text-[11px] font-bold uppercase tracking-[.2em] text-[var(--brand-gold)]">{photo.tag}</p>
+                    <h3 className="max-w-xs text-xl font-semibold leading-tight text-foreground">{photo.title}</h3>
+                    <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand-gold)] px-5 py-3.5 text-xs font-black uppercase text-background transition hover:bg-[var(--brand-cream)]">
+                      Ver disponibilidade <ArrowRight size={15} />
+                    </a>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
