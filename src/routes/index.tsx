@@ -184,7 +184,7 @@ function SayCell() {
 
           <div className="mx-auto grid max-w-md gap-7 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
             {storePhotos.map((photo) => (
-              <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-gold)]/20 bg-[var(--brand-surface)] shadow-2xl">
+              <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-gold)]/20 bg-[var(--brand-surface)] shadow-[0_24px_60px_rgba(255,255,255,0.06)]">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-foreground/10 px-4 py-3">
                   <div className="flex min-w-0 items-center gap-3">
                     <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-gold)]/50 object-cover" />
