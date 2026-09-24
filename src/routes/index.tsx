@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, type LucideIcon } from "lucide-react";
 import ios27IntroAsset from "@/assets/ios27/ios-27-introducao.png.asset.json";
 import ios27PerformanceAsset from "@/assets/ios27/ios-27-desempenho.png.asset.json";
@@ -86,6 +87,28 @@ const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
 ];
 
 const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
+
+function IphoneCard({ product }: { product: (typeof products)[number] }) {
+  const [selectedColor, setSelectedColor] = useState<"black" | "white">("black");
+  return (
+    <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
+      <div className="aspect-[4/4.5] overflow-hidden bg-white">
+        <img src={product.image} alt={`${product.name} na cor ${selectedColor === "black" ? "preto" : "branco"}`} loading="lazy" className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" style={selectedColor === "white" ? { filter: "grayscale(1) brightness(1.55) contrast(.82)" } : undefined} />
+      </div>
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <div><h3 className="font-bold">{product.name}</h3><p className="mt-1 text-xs text-white/45">Cor: {selectedColor === "black" ? "Preto" : "Branco"}</p></div>
+          <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
+        </div>
+        <div className="mt-4 flex items-center gap-2">
+          <button type="button" onClick={() => setSelectedColor("black")} aria-label={`${product.name} preto`} aria-pressed={selectedColor === "black"} className={`h-5 w-5 rounded-full border-2 bg-[#111111] transition ${selectedColor === "black" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-white/35"}`} />
+          <button type="button" onClick={() => setSelectedColor("white")} aria-label={`${product.name} branco`} aria-pressed={selectedColor === "white"} className={`h-5 w-5 rounded-full border-2 bg-white transition ${selectedColor === "white" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-black/30"}`} />
+          <span className="ml-1 text-[11px] text-white/35">Preto • Branco</span>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 function SayCell() {
   return (
@@ -183,27 +206,8 @@ function SayCell() {
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <article key={product.name} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
-              <div className="aspect-[4/4.5] overflow-hidden bg-white">
-                <img src={product.image} alt={product.name} loading="lazy" className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" />
-              </div>
-              <div className="p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="font-bold">{product.name}</h3>
-                    <p className="mt-1 text-xs text-white/45">Cor: {product.color}</p>
-                  </div>
-                  <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
-                </div>
-                <div className="mt-4 flex items-center gap-2" aria-label={`Acabamento ${product.color}`}>
-                  <span className="h-4 w-4 rounded-full border border-white/30 bg-[#111111]" />
-                  <span className="h-4 w-4 rounded-full border border-black/20 bg-white" />
-                  <span className="text-[11px] text-white/35">Preto • Branco</span>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+            <IphoneCard key={product.name} product={product} />
+          ))}       </div>
         <div className="mt-8 text-center"><p className="text-xs text-white/40">Pague só na entrega.</p></div>
       </section>
 
