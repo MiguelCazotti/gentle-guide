@@ -89,34 +89,35 @@ const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
 const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
 
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
-  const [selectedColor, setSelectedColor] = useState<"black" | "white">("black");
   const [imageFailed, setImageFailed] = useState(false);
-  const colorName = product.colorNames[selectedColor];
   return (
     <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
       <div className="relative aspect-[4/4.5] overflow-hidden bg-white">
         {imageFailed ? (
-          <div role="img" aria-label={`${product.name} — ilustração de fallback na cor ${colorName}`} className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#f8f8f8] to-[#e8e8e8]">
+          <div role="img" aria-label={`Ilustração de fallback do ${product.name}`} className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#f8f8f8] to-[#e8e8e8]">
             <svg viewBox="0 0 180 280" className="h-[78%] max-w-[70%] drop-shadow-xl" aria-hidden="true">
-              <rect x="28" y="4" width="124" height="272" rx="25" fill={selectedColor === "black" ? "#252525" : "#fdfdfd"} stroke="#777" strokeWidth="3" />
-              <rect x="36" y="13" width="108" height="254" rx="19" fill={selectedColor === "black" ? "#111" : "#f2f2f2"} />
+              <rect x="28" y="4" width="124" height="272" rx="25" fill="#252525" stroke="#777" strokeWidth="3" />
+              <rect x="36" y="13" width="108" height="254" rx="19" fill="#111" />
               <rect x="74" y="18" width="32" height="7" rx="4" fill="#555" />
               <circle cx="90" cy="251" r="5" fill="#b7b7b7" />
             </svg>
           </div>
         ) : (
-          <img src={product.images[selectedColor]} alt={`${product.name} na cor ${colorName}`} loading="lazy" onError={() => setImageFailed(true)} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" />
+          <img src={product.images.black} alt={`${product.name} — cores disponíveis`} loading="lazy" onError={() => setImageFailed(true)} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" />
         )}
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
-          <div><h3 className="font-bold">{product.name}</h3><p className="mt-1 text-xs text-white/45">Cor: {colorName}</p></div>
+          <h3 className="font-bold">{product.name}</h3>
           <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
         </div>
-        <div className="mt-4 flex items-center gap-2">
-          <button type="button" onClick={() => { setSelectedColor("black"); setImageFailed(false); }} aria-label={`${product.name} preto`} aria-pressed={selectedColor === "black"} style={{ backgroundColor: product.colorValues.black }} className={`h-5 w-5 rounded-full border-2 transition ${selectedColor === "black" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-white/35"}`} />
-          <button type="button" onClick={() => { setSelectedColor("white"); setImageFailed(false); }} aria-label={`${product.name} branco`} aria-pressed={selectedColor === "white"} style={{ backgroundColor: product.colorValues.white }} className={`h-5 w-5 rounded-full border-2 transition ${selectedColor === "white" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-black/30"}`} />
-          <span className="ml-1 text-[11px] text-white/35">{product.colorNames.black} • {product.colorNames.white}</span>
+        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2" aria-label={`Cores disponíveis para ${product.name}`}>
+          {(["black", "white"] as const).map((color) => (
+            <span key={color} className="inline-flex items-center gap-1.5 text-[11px] text-white/55">
+              <span aria-hidden="true" className="h-4 w-4 rounded-full border border-white/25" style={{ backgroundColor: product.colorValues[color] }} />
+              {product.colorNames[color]}
+            </span>
+          ))}
         </div>
       </div>
     </article>
