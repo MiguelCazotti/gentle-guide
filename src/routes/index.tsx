@@ -176,6 +176,18 @@ function SayCell() {
         </div>
       </section>
 
+      <section id="iphones" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-10 flex items-end justify-between gap-4">
+          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos Modelos</h2></div>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#e6c86e] md:block">Consultar disponibilidade →</a>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => (
+            <IphoneCard key={product.name} product={product} />
+          ))}       </div>
+        <div className="mt-8 text-center"><p className="text-xs text-white/40">Pague só na entrega.</p></div>
+      </section>
+
       <section id="loja" className="scroll-mt-20 border-b border-border/20 bg-[var(--brand-canvas)] py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto mb-10 max-w-xl text-center md:mb-14">
@@ -214,18 +226,6 @@ function SayCell() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section id="iphones" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos Modelos</h2></div>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#e6c86e] md:block">Consultar disponibilidade →</a>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
-            <IphoneCard key={product.name} product={product} />
-          ))}       </div>
-        <div className="mt-8 text-center"><p className="text-xs text-white/40">Pague só na entrega.</p></div>
       </section>
 
       <section id="ios-27" className="scroll-mt-20 border-y border-[#d6b35a]/10 bg-[#f3f3f1] py-20 text-[#111111]">
