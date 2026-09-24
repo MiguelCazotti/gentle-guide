@@ -32,26 +32,26 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { name: "iPhone 18 Pro Max", image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609?.v=M0dlUVBobHVpY1h1dmlaR3RZekpEMEhRUmlKNkhhdE80VTZIL1ZUdjd2eUpxQWhXdDZiUERGcnlNZW9hNkhxRmJPbDJJWDFrVGJEYlIxTitTcHhVWldHUUw4RnF3MmwyMUVGYm13ODRTWXlINUhveGhFc1lXWld4RkQ2dkFBMi8&fmt=png-alpha&hei=700&wid=550", color: "Preto" },
-  { name: "iPhone 18 Pro", image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609?.v=M0dlUVBobHVpY1h1dmlaR3RZekpEMEhRUmlKNkhhdE80VTZIL1ZUdjd2eUpxQWhXdDZiUERGcnlNZW9hNkhxRmJPbDJJWDFrVGJEYlIxTitTcHhVWldHUUw4RnF3MmwyMUVGYm13ODRTWXlINUhveGhFc1lXWld4RkQ2dkFBMi8&fmt=png-alpha&hei=700&wid=550", color: "Preto" },
-  { name: "iPhone 17 Pro Max", image: "https://imgrosetta.webtekno.com/file/580950/1200xauto.jpg", color: "Prata" },
-  { name: "iPhone 17 Pro", image: "https://imgrosetta.webtekno.com/file/580950/1200xauto.jpg", color: "Prata" },
-  { name: "iPhone 17", image: "https://doc.smarty.cz/pic/FPMH000K01-600-600.webp", color: "Preto" },
-  { name: "iPhone 16 Pro Max", image: "https://res.plaisio.gr/c_limit%2Cf_auto%2Cw_2048%2Cq_75/d_Shared%3ANotFound%3Aproduct-notfound.jpg/Shared/Product/Images/4620410.jpg", color: "Titânio preto" },
-  { name: "iPhone 16 Pro", image: "https://www.pbtech.co.nz/imgprod/M/P/MPHAPP516210__1.jpg?h=226757430", color: "Titânio preto" },
-  { name: "iPhone 16", image: "https://media.studio7thailand.com/154874/iPhone_16_Black_PDP_Image_Position_1a_Black_Color__TH-TH.png", color: "Preto" },
-  { name: "iPhone 15 Pro Max", image: "https://istore.co.bw/cdn/shop/files/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-1__WWEN_de77cca3-8c84-46f9-acb5-a41652ca4fdb_2048x.jpg?v=1697795211", color: "Titânio preto" },
-  { name: "iPhone 15 Pro", image: "https://istore.co.bw/cdn/shop/files/iPhone_15_Pro_Black_Titanium_PDP_Image_Position-1__WWEN_a427850f-454a-4736-97cc-4764eb382b3a_2048x.jpg?v=1763026647", color: "Titânio preto" },
-  { name: "iPhone 15", image: "https://uno.ma/pub/media/catalog/product/cache/af8d7fd2c4634f9c922fba76a4a30c04/i/p/ip-15-bl-1_2.jpeg", color: "Preto" },
-  { name: "iPhone 14 Pro Max", image: "https://mobilemarketuk.com/cdn/shop/collections/iphone_14_pro_max.jpg?v=1706964907", color: "Preto espacial" },
-  { name: "iPhone 14 Pro", image: "https://bludiode.com/img/p/3/8/6/2/4/38624.jpg", color: "Preto espacial" },
-  { name: "iPhone 14", image: "https://media.ldlc.com/r1600/ld/products/00/05/97/72/LD0005977224_0005977256.jpg", color: "Meia-noite" },
-  { name: "iPhone 13 Pro Max", image: "https://cdn.multitronic.fi/images/prod/6/0/xMLL63KG-A-1.jpg.pagespeed.ic.--IeAeQwJK.jpg", color: "Grafite" },
-  { name: "iPhone 13 Pro", image: "https://media.education.studio7thailand.com/40349/iPhone_13_Pro_Graphite_1.jpg", color: "Grafite" },
-  { name: "iPhone 13", image: "https://electronicparadise.in/cdn/shop/files/Apple13black.jpg?v=1702471683&width=1406", color: "Meia-noite" },
-  { name: "iPhone 12 Pro Max", image: "https://static01.galaxus.com/productimages/3/8/9/1/7/5/1/8/iPhone_12_Pro_Max_Graphite_PDP_Image_Position-2__en-US.jpg_sea.jpeg", color: "Grafite" },
-  { name: "iPhone 12 Pro", image: "https://static01.galaxus.com/productimages/3/8/9/1/7/5/1/8/iPhone_12_Pro_Max_Graphite_PDP_Image_Position-2__en-US.jpg_sea.jpeg", color: "Grafite" },
-  { name: "iPhone 12", image: "https://lojae-s3-prd-files.radiopopular.pt/files/static/images/products/81129_0.jpg", color: "Preto" },
+  { name: "iPhone 18 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-finish-select-202609-6-9inch-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-finish-select-202609-6-9inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 18 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-finish-select-202609-6-3inch-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-18-pro-finish-select-202609-6-3inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 17 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 17 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-deepblue?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 17", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-202509-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-202509-white?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 16 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-blacktitanium?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-whitetitanium?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 16 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-blacktitanium?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-whitetitanium?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 16", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-white?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 15 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-blacktitanium?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-whitetitanium?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 15 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-whitetitanium?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 15", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-pink?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 14 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-spaceblack?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 14 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-spaceblack?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 14", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-starlight?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 13 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-finish-select-202109-6-7inch-graphite?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-finish-select-202109-6-7inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 13 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-finish-select-202109-6-1inch-graphite?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-finish-select-202109-6-1inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 13", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202109-midnight?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202109-starlight?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 12 Pro Max", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-finish-select-202010-6-7inch-graphite?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-finish-select-202010-6-7inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 12 Pro", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-finish-select-202010-6-1inch-graphite?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-finish-select-202010-6-1inch-silver?wid=600&hei=760&fmt=png-alpha" } },
+  { name: "iPhone 12", images: { black: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-finish-select-202010-black?wid=600&hei=760&fmt=png-alpha", white: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-finish-select-202010-white?wid=600&hei=760&fmt=png-alpha" } },
 ];
 
 const reels = [
@@ -90,19 +90,32 @@ const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site
 
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
   const [selectedColor, setSelectedColor] = useState<"black" | "white">("black");
+  const [imageFailed, setImageFailed] = useState(false);
+  const colorName = selectedColor === "black" ? "Preto" : "Branco";
   return (
     <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
-      <div className="aspect-[4/4.5] overflow-hidden bg-white">
-        <img src={product.image} alt={`${product.name} na cor ${selectedColor === "black" ? "preto" : "branco"}`} loading="lazy" className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" style={selectedColor === "white" ? { filter: "grayscale(1) brightness(1.55) contrast(.82)" } : undefined} />
+      <div className="relative aspect-[4/4.5] overflow-hidden bg-white">
+        {imageFailed ? (
+          <div role="img" aria-label={`${product.name} — ilustração de fallback na cor ${colorName}`} className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#f8f8f8] to-[#e8e8e8]">
+            <svg viewBox="0 0 180 280" className="h-[78%] max-w-[70%] drop-shadow-xl" aria-hidden="true">
+              <rect x="28" y="4" width="124" height="272" rx="25" fill={selectedColor === "black" ? "#252525" : "#fdfdfd"} stroke="#777" strokeWidth="3" />
+              <rect x="36" y="13" width="108" height="254" rx="19" fill={selectedColor === "black" ? "#111" : "#f2f2f2"} />
+              <rect x="74" y="18" width="32" height="7" rx="4" fill="#555" />
+              <circle cx="90" cy="251" r="5" fill="#b7b7b7" />
+            </svg>
+          </div>
+        ) : (
+          <img src={product.images[selectedColor]} alt={`${product.name} na cor ${colorName}`} loading="lazy" onError={() => setImageFailed(true)} className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" />
+        )}
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
-          <div><h3 className="font-bold">{product.name}</h3><p className="mt-1 text-xs text-white/45">Cor: {selectedColor === "black" ? "Preto" : "Branco"}</p></div>
+          <div><h3 className="font-bold">{product.name}</h3><p className="mt-1 text-xs text-white/45">Cor: {colorName}</p></div>
           <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
         </div>
         <div className="mt-4 flex items-center gap-2">
-          <button type="button" onClick={() => setSelectedColor("black")} aria-label={`${product.name} preto`} aria-pressed={selectedColor === "black"} className={`h-5 w-5 rounded-full border-2 bg-[#111111] transition ${selectedColor === "black" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-white/35"}`} />
-          <button type="button" onClick={() => setSelectedColor("white")} aria-label={`${product.name} branco`} aria-pressed={selectedColor === "white"} className={`h-5 w-5 rounded-full border-2 bg-white transition ${selectedColor === "white" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-black/30"}`} />
+          <button type="button" onClick={() => { setSelectedColor("black"); setImageFailed(false); }} aria-label={`${product.name} preto`} aria-pressed={selectedColor === "black"} className={`h-5 w-5 rounded-full border-2 bg-[#111111] transition ${selectedColor === "black" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-white/35"}`} />
+          <button type="button" onClick={() => { setSelectedColor("white"); setImageFailed(false); }} aria-label={`${product.name} branco`} aria-pressed={selectedColor === "white"} className={`h-5 w-5 rounded-full border-2 bg-white transition ${selectedColor === "white" ? "scale-110 border-[#e6c86e] ring-2 ring-[#e6c86e]/30" : "border-black/30"}`} />
           <span className="ml-1 text-[11px] text-white/35">Preto • Branco</span>
         </div>
       </div>
