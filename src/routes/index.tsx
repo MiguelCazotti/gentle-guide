@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, Apple, type LucideIcon } from "lucide-react";
+import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, type LucideIcon } from "lucide-react";
 import ios27IntroAsset from "@/assets/ios27/ios-27-introducao.png.asset.json";
 import ios27PerformanceAsset from "@/assets/ios27/ios-27-desempenho.png.asset.json";
 import ios27GlassAsset from "@/assets/ios27/ios-27-liquid-glass.png.asset.json";
@@ -31,12 +31,26 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { name: "iPhone 14 Pro Max", image: "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=900&q=90" },
-  { name: "iPhone 14", image: "https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?auto=format&fit=crop&w=900&q=90" },
-  { name: "iPhone 13 Pro Max", image: "https://images.unsplash.com/photo-1632633173522-3b8c5a1b6d6f?auto=format&fit=crop&w=900&q=90" },
-  { name: "iPhone 13", image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=900&q=90" },
-  { name: "iPhone 12", image: "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68?auto=format&fit=crop&w=900&q=90" },
-  { name: "iPhone 11", image: "https://images.unsplash.com/photo-1574755393849-623942496936?auto=format&fit=crop&w=900&q=90" },
+  { name: "iPhone 18 Pro Max", image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609?.v=M0dlUVBobHVpY1h1dmlaR3RZekpEMEhRUmlKNkhhdE80VTZIL1ZUdjd2eUpxQWhXdDZiUERGcnlNZW9hNkhxRmJPbDJJWDFrVGJEYlIxTitTcHhVWldHUUw4RnF3MmwyMUVGYm13ODRTWXlINUhveGhFc1lXWld4RkQ2dkFBMi8&fmt=png-alpha&hei=700&wid=550", color: "Preto" },
+  { name: "iPhone 18 Pro", image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609?.v=M0dlUVBobHVpY1h1dmlaR3RZekpEMEhRUmlKNkhhdE80VTZIL1ZUdjd2eUpxQWhXdDZiUERGcnlNZW9hNkhxRmJPbDJJWDFrVGJEYlIxTitTcHhVWldHUUw4RnF3MmwyMUVGYm13ODRTWXlINUhveGhFc1lXWld4RkQ2dkFBMi8&fmt=png-alpha&hei=700&wid=550", color: "Preto" },
+  { name: "iPhone 17 Pro Max", image: "https://imgrosetta.webtekno.com/file/580950/1200xauto.jpg", color: "Prata" },
+  { name: "iPhone 17 Pro", image: "https://imgrosetta.webtekno.com/file/580950/1200xauto.jpg", color: "Prata" },
+  { name: "iPhone 17", image: "https://doc.smarty.cz/pic/FPMH000K01-600-600.webp", color: "Preto" },
+  { name: "iPhone 16 Pro Max", image: "https://res.plaisio.gr/c_limit%2Cf_auto%2Cw_2048%2Cq_75/d_Shared%3ANotFound%3Aproduct-notfound.jpg/Shared/Product/Images/4620410.jpg", color: "Titânio preto" },
+  { name: "iPhone 16 Pro", image: "https://www.pbtech.co.nz/imgprod/M/P/MPHAPP516210__1.jpg?h=226757430", color: "Titânio preto" },
+  { name: "iPhone 16", image: "https://media.studio7thailand.com/154874/iPhone_16_Black_PDP_Image_Position_1a_Black_Color__TH-TH.png", color: "Preto" },
+  { name: "iPhone 15 Pro Max", image: "https://istore.co.bw/cdn/shop/files/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-1__WWEN_de77cca3-8c84-46f9-acb5-a41652ca4fdb_2048x.jpg?v=1697795211", color: "Titânio preto" },
+  { name: "iPhone 15 Pro", image: "https://istore.co.bw/cdn/shop/files/iPhone_15_Pro_Black_Titanium_PDP_Image_Position-1__WWEN_a427850f-454a-4736-97cc-4764eb382b3a_2048x.jpg?v=1763026647", color: "Titânio preto" },
+  { name: "iPhone 15", image: "https://uno.ma/pub/media/catalog/product/cache/af8d7fd2c4634f9c922fba76a4a30c04/i/p/ip-15-bl-1_2.jpeg", color: "Preto" },
+  { name: "iPhone 14 Pro Max", image: "https://mobilemarketuk.com/cdn/shop/collections/iphone_14_pro_max.jpg?v=1706964907", color: "Preto espacial" },
+  { name: "iPhone 14 Pro", image: "https://bludiode.com/img/p/3/8/6/2/4/38624.jpg", color: "Preto espacial" },
+  { name: "iPhone 14", image: "https://media.ldlc.com/r1600/ld/products/00/05/97/72/LD0005977224_0005977256.jpg", color: "Meia-noite" },
+  { name: "iPhone 13 Pro Max", image: "https://cdn.multitronic.fi/images/prod/6/0/xMLL63KG-A-1.jpg.pagespeed.ic.--IeAeQwJK.jpg", color: "Grafite" },
+  { name: "iPhone 13 Pro", image: "https://media.education.studio7thailand.com/40349/iPhone_13_Pro_Graphite_1.jpg", color: "Grafite" },
+  { name: "iPhone 13", image: "https://electronicparadise.in/cdn/shop/files/Apple13black.jpg?v=1702471683&width=1406", color: "Meia-noite" },
+  { name: "iPhone 12 Pro Max", image: "https://static01.galaxus.com/productimages/3/8/9/1/7/5/1/8/iPhone_12_Pro_Max_Graphite_PDP_Image_Position-2__en-US.jpg_sea.jpeg", color: "Grafite" },
+  { name: "iPhone 12 Pro", image: "https://static01.galaxus.com/productimages/3/8/9/1/7/5/1/8/iPhone_12_Pro_Max_Graphite_PDP_Image_Position-2__en-US.jpg_sea.jpeg", color: "Grafite" },
+  { name: "iPhone 12", image: "https://lojae-s3-prd-files.radiopopular.pt/files/static/images/products/81129_0.jpg", color: "Preto" },
 ];
 
 const reels = [
@@ -167,15 +181,25 @@ function SayCell() {
           <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos iPhones</h2></div>
           <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#e6c86e] md:block">Consultar disponibilidade →</a>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <article key={product.name} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
               <div className="aspect-[4/4.5] overflow-hidden bg-white">
-                <img src={product.image} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src={product.image} alt={product.name} loading="lazy" className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105" />
               </div>
-              <div className="flex items-center justify-between p-5">
-                <h3 className="font-bold">{product.name}</h3>
-                <a href={whatsapp} target="_blank" rel="noreferrer" className="rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
+              <div className="p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-bold">{product.name}</h3>
+                    <p className="mt-1 text-xs text-white/45">Cor: {product.color}</p>
+                  </div>
+                  <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
+                </div>
+                <div className="mt-4 flex items-center gap-2" aria-label={`Acabamento ${product.color}`}>
+                  <span className="h-4 w-4 rounded-full border border-white/30 bg-[#111111]" />
+                  <span className="h-4 w-4 rounded-full border border-black/20 bg-white" />
+                  <span className="text-[11px] text-white/35">Preto • Branco</span>
+                </div>
               </div>
             </article>
           ))}
@@ -193,12 +217,7 @@ function SayCell() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {ios27Updates.map((update, index) => (
               <figure key={update.alt} className="group overflow-hidden rounded-lg border border-[#111111]/10 bg-white shadow-sm">
-                <img
-                  src={update.image}
-                  alt={update.alt}
-                  loading="lazy"
-                  className="aspect-square h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
+                <img src={update.image} alt={update.alt} loading="lazy" className="aspect-square h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
                 <figcaption className="sr-only">Parte {index + 1}: {update.alt}</figcaption>
               </figure>
             ))}
