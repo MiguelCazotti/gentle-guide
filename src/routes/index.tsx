@@ -7,6 +7,10 @@ import ios27SiriAsset from "@/assets/ios27/ios-27-siri-ai.png.asset.json";
 import ios27AppsAsset from "@/assets/ios27/ios-27-apps.png.asset.json";
 import ios27CameraAsset from "@/assets/ios27/ios-27-camera.png.asset.json";
 import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
+import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
+import storeServiceAsset from "@/assets/store/loja-atendimento.png.asset.json";
+import storeAccessoriesAsset from "@/assets/store/loja-acessorios.png.asset.json";
+import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: SayCell,
@@ -46,6 +50,13 @@ const ios27Updates = [
   { image: ios27CameraAsset.url, alt: "Novo modo da Siri na câmera do iPhone" },
 ];
 
+const storePhotos = [
+  { image: storeWheelAsset.url, alt: "Espaço da SAY CELL com roleta de prêmios" },
+  { image: storeServiceAsset.url, alt: "Área de atendimento da loja SAY CELL" },
+  { image: storeAccessoriesAsset.url, alt: "Exposição de acessórios Apple na SAY CELL" },
+  { image: storeShowcaseAsset.url, alt: "Vitrine de iPhones e logo da SAY CELL" },
+];
+
 const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
   { icon: ShieldCheck, title: "5 anos", text: "+ de 7.000 clientes" },
   { icon: ShieldCheck, title: "6 meses a 1 ano", text: "de garantia" },
@@ -64,6 +75,7 @@ function SayCell() {
             <span className="hidden sm:inline">SAY<span className="text-[#e6c86e]">CELL</span></span>
           </a>
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
+            <a href="#loja" className="hover:text-[#e6c86e]">A loja</a>
             <a href="#iphones" className="hover:text-[#e6c86e]">iPhones</a>
             <a href="#ios-27" className="hover:text-[#e6c86e]">iOS 27</a>
             <a href="#reels" className="hover:text-[#e6c86e]">Reels</a>
@@ -76,8 +88,8 @@ function SayCell() {
       </header>
 
       <section className="relative min-h-[640px] overflow-hidden border-b border-[#d6b35a]/10">
-        <img src={sayCellLogoAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-55" />
-        <div className="absolute inset-0 bg-[#080808]/65" />
+        <img src={storeShowcaseAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-60" />
+        <div className="absolute inset-0 bg-[#080808]/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-transparent to-[#080808]" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
           <img src={sayCellLogoAsset.url} alt="SAY CELL" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#e6c86e]/50 object-cover shadow-2xl md:h-40 md:w-40" />
@@ -99,6 +111,28 @@ function SayCell() {
               <div><p className="font-bold">{title}</p><p className="text-xs text-white/45">{text}</p></div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section id="loja" className="scroll-mt-20 border-b border-[#d6b35a]/10 bg-[#0b0b0b] py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-10 max-w-2xl">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">SAY CELL por dentro</p>
+            <h2 className="text-3xl font-black md:text-4xl">Conheça nossa loja</h2>
+            <p className="mt-4 text-sm leading-6 text-white/55">Um espaço preparado para você conhecer nossos iPhones e acessórios de perto.</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {storePhotos.map((photo, index) => (
+              <figure key={photo.alt} className={`group overflow-hidden rounded-lg border border-[#e6c86e]/15 bg-[#111111] ${index === 3 ? "sm:col-span-2 lg:col-span-2" : ""}`}>
+                <img
+                  src={photo.image}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className={`h-full min-h-80 w-full object-cover transition duration-500 group-hover:scale-[1.02] ${index === 3 ? "aspect-[16/10]" : "aspect-[3/4]"}`}
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
