@@ -214,7 +214,7 @@ function SayCell() {
 
       <section id="iphones" className="mx-auto max-w-6xl px-6 py-20">
         <div className="mb-10 flex items-end justify-between gap-4">
-          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos iPhones</h2></div>
+          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos Modelos</h2></div>
           <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#e6c86e] md:block">Consultar disponibilidade →</a>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
